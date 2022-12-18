@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>My Portfolio</title>
+
+    </head>
+    <body>
+
+<style>
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #9e6124;
+   }
+.sidenav {
+     height: 100%;
+     width: 0;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: 0;
+     background-color: rgba(250, 184, 109, 0.781);
+     overflow-x: hidden;
+     transition: 0.5s;
+     padding-top: 60px;
+}
+   
+.sidenav a {
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     font-size: 25px;
+     color: #f5f4f0;
+     display: block;
+     transition: 0.3s;
+}
+   
+.sidenav a:hover {
+     color: #000000c7;
+}
+   
+.sidenav .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     float: right;
+}  
+@media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 620px){
+    .contact{
+    max-width:800px;
+    }
+    .contact-bar{
+      float: left;
+      position: relative;
+  }
+
+ 
+}
+span{
+	color: #f5d395;
+}
+.contact{
+	padding: 10px 0px;
+}
+
+.title h2{
+	color: #f5d395;
+	font-size: 100px;
+    margin-left: 35%;
+}
+.contact-bar{
+    float: left;
+}
+
+.contact-bar p{
+	color: #000000;
+	font-size: 30px;
+    margin-left: 80px;
+	padding: 16px 0px;
+}
+.contact-bar i{
+	font-size: 30px;
+}
+
+
+footer{
+	position: relative;
+	height: 100%;
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30%;
+
+}
+
+footer p:nth-child(1){
+	font-size: 30px;
+	color: rgb(0, 0, 0);
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+footer p:nth-child(2){
+	color: #000000;
+	font-size: 17px;
+    font-weight: bold;
+	width: 500px;
+	text-align: center;
+}
+.social{
+	display: flex;
+}
+.social a{
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin: 20px 3px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.end{
+	position: absolute;
+	color:#000000;
+	font-size: 5px; 
+    margin-top: 80px;
+	margin-bottom: 20px;
+}
+
+
+</style>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html">SERVICES</a> 
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+<div class="logo">
+    <h2>PORT<span>FOLIO</span></h2>
+  </div>
+
+  <span style="font-size:35px;cursor:pointer" onclick="openNav()">&#9776;
+
+    <div class="contact">
+        <div class="title">
+            <h2>Contact</h2>
+        </div>
+    </div>
+
+    <div class="contact-bar">
+        <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i>Philippines</a></p>
+        <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i>+63 9421933212</p>
+        <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i>mariela@gmail.com</p>
+        <p><a href="https://www.facebook.com/mariela.navia.12" style="color:#000000;"><i class="fa-brands fa-facebook"></i></a>&nbsp;<a href="https://www.instagram.com/" style="color:#000000;"><i class="fa-brands fa-instagram"></i></a></p>
+    </div> 
+
+    <footer>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f" style="color:rgba(0, 0, 0, 0.8);"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:rgba(0, 0, 0, 0.8);"></i></a>
+        </div>
+        <p class="end">Copyright <span>2022</span> </p>
+    </footer>
+        
+    <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+    </script>
+        
+    </body>
+
+</html>
+    
